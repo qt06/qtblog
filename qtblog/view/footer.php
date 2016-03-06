@@ -5,33 +5,38 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 class="text-center">我的足迹</h3>
                     <ul class="list-inline text-center">
                         <li>
-                            <a aria-label="我的微博" href="http://weibo.com/qt06/">
+                            <a href="http://weibo.com/qt06/">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
                                 </span>
+                                <span class="sr-only">新浪微博</span>
+
                             </a>
                         </li>
                         <li>
-                            <a aria-label="我的Facebook" href="http://www.facebook.com/qt10011/">
+                            <a href="http://www.facebook.com/qt10011/">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                                 </span>
+                                <span class="sr-only">Facebook</span>
                             </a>
                         </li>
                         <li>
-                            <a aria-label="我的github" href="https://github.com/qt06/">
+                            <a href="https://github.com/qt06/">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                                 </span>
+                                <span class="sr-only">Github</span>
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright     &copy; <?=date('Y')?> <a href="<?=$conf['appurl']?>"><?=$conf['appname']?></a>。</p>
+                    <p class="copyright text-muted">Copyright &copy; <?=date('Y')?> <a href="<?=$conf['appurl']?>"><?=$conf['appname']?></a></p>
                 </div>
             </div>
         </div>
