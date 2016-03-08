@@ -10,11 +10,17 @@ $conf = (@include './conf/conf.php') OR exit(header('Location: install/'));
 $conf += @include './qtblog/conf.php';
 
 include './xiunophp/xiunophp.php';
+include './qtblog/model/user.func.php';
 include './qtblog/model/content.func.php';
 include './qtblog/model/comment.func.php';
 include './qtblog/model/meta.func.php';
 include './qtblog/model/relationship.func.php';
+include './qtblog/model/check.func.php';
 include './qtblog/var/HyperDown.php';
+
+$user = user_token_get(); 			// 全局的 user
+$uid = $user['uid'];				// 全局的 uid
+$gid = $user['gid'];				// 全局的 gid
 
 $route = param(0, 'index');
 
@@ -37,8 +43,14 @@ function message($code, $message, $goto = '') {
 		exit();
 	}
 $conf['title'] = is_array($message) ? '提示信息' : $message;
-		echo $message;
-	//include './view/message.htm';
+		if(is_array($message)) {
+			print_r($message);
+		} else {
+			echo $message;
+		}
+if(!empty($goto)) {
+			header("Location: $goto");
+		}
 	exit;
 }
 

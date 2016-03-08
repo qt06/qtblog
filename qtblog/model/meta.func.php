@@ -72,18 +72,23 @@ function meta_maxid() {
 	return db_maxid('qtblog_metas', 'mid');
 }
 
-function meta_get_meta($meta) {
-	$metas = meta_find(array('slug' => $meta), array(), 1, 1);
+function meta_get_meta_by_slug($slug) {
+	$metas = meta_find(array('slug' => $slug), array(), 1, 1);
+$meta = empty($metas) ? array() : array_pop($metas);
+return $meta;
+}
+function meta_get_meta_by_name($name) {
+	$metas = meta_find(array('name' => $name), array(), 1, 1);
 $meta = empty($metas) ? array() : array_pop($metas);
 return $meta;
 }
 
 function meta_get_category($cate) {
-$category = meta_get_meta($cate);
+$category = meta_get_meta_by_slug($cate);
 return (!empty($category) && $category['type'] == 'category') ? $category : array();
 }
 
 function meta_get_tag($tag) {
-$tag = meta_get_meta($tag);
+$tag = meta_get_meta_by_slug($tag);
 return (!empty($tag) && $tag['type'] == 'tag') ? $tag : array();
 }

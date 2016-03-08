@@ -15,12 +15,12 @@ function relationship__update($coid, $arr) {
 	return db_exec("UPDATE `qtblog_relationships` SET $sqladd WHERE coid='$coid'");
 }
 
-function relationship__read($coid) {
-	return db_find_one("SELECT * FROM `qtblog_relationships` WHERE coid='$coid'");
+function relationship__read($cid, $mid) {
+	return db_find_one("SELECT * FROM `qtblog_relationships` WHERE cid='$cid' AND mid='$mid'");
 }
 
-function relationship__delete($coid) {
-	return db_exec("DELETE FROM `qtblog_relationships` WHERE coid='$coid'");
+function relationship__delete($cid, $mid) {
+	return db_exec("DELETE FROM `qtblog_relationships` WHERE cid='$cid' AND mid='$mid'");
 }
 
 function relationship__find($cond = array(), $orderby = array(), $page = 1, $pagesize = 20) {
@@ -47,14 +47,14 @@ function relationship_replace($arr) {
 	return db_exec("REPLACE INTO `qtblog_relationships` SET $sqladd");
 }
 
-function relationship_read($coid) {
-	$relationship = relationship__read($coid);
+function relationship_read($cid, $mid) {
+	$relationship = relationship__read($cid, $mid);
 	//relationship_format($relationship);
 	return $relationship;
 }
 
-function relationship_delete($coid) {
-	$r = relationship__delete($coid);
+function relationship_delete($cid, $mid) {
+	$r = relationship__delete($cid, $mid);
 	return $r;
 }
 

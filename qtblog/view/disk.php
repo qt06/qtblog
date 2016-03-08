@@ -51,6 +51,7 @@
 </object>
 </div>
 <? include 'footer.php'; ?>
+<script src="<?=$conf['appurl']?>qtblog/view/js/jquery.hotkeys.js"></script>
 <script>
 var wmp = $("#wmp").get(0);
 $(document).on("keydown.space",function() {play();});
@@ -66,16 +67,6 @@ wmp.controls.pause();
 wmp.controls.play();
 }
 }
-</script>
-            </div>
-        </article>
-
-
-
-</div><!-- end #main-->
-
-
-<script>
 
 $("#convert").on("click",function() {
 var url = $("#diskurl").val();
@@ -107,4 +98,3 @@ $("#convert").trigger("click");
 }
 });
 </script>
-

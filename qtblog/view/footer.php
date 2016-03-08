@@ -57,6 +57,8 @@ var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " 
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3f8d6cfc6b0812547f61c53e44fdfe06' type='text/javascript'%3E%3C/script%3E"));
 </script>
 <script type="text/javascript" src="http://tajs.qq.com/stats?sId=25526197" charset="UTF-8"></script></div>
+<bgsound src="http://www.qt.hk/msg.wav" />
+
 </body>
 
 </html>
