@@ -1,4 +1,4 @@
-    <hr>
+    <hr aria-hidden="true">
 
     <!-- Footer -->
     <footer>
@@ -47,9 +47,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?=$conf['appurl']?>qtblog/view/js/bootstrap.min.js"></script>
-
+    <script src="<?=$conf['appurl']?>qtblog/view/js/jqBootstrapValidation.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="<?=$conf['appurl']?>qtblog/view/js/clean-blog.min.js"></script>
+    <script src="<?=$conf['appurl']?>qtblog/view/js/clean-blog.js"></script>
 
 <div class="sr-only">
 <script type="text/javascript">

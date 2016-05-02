@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <p>请您填写下面的表格，我会尽可能在24小时内回复您。</p>
-                <form method="post" action="contact/send/" name="sentMessage" id="contactForm" novalidate>
+                <form method="post" action="/contact/send/" name="sentMessage" id="contactForm" novalidate>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label for="name">姓名</label>

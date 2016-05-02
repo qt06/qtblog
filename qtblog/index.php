@@ -17,6 +17,7 @@ include './qtblog/model/meta.func.php';
 include './qtblog/model/relationship.func.php';
 include './qtblog/model/check.func.php';
 include './qtblog/var/HyperDown.php';
+include './qtblog/var/Parsedown.php';
 
 $user = user_token_get(); 			// 全局的 user
 $uid = $user['uid'];				// 全局的 uid

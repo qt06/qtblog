@@ -16,7 +16,7 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container" role="main">
+    <div class="container" role="main" id="content" tabindex="-1">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 <? foreach($bloglist as $blog) { ?>
@@ -28,7 +28,7 @@
                     </a>
                     <p class="post-meta">时间： <?=date("Y-m-d", $blog['created'])?> 浏览：<?=$blog['views']?></p>
                 </div>
-                <hr>
+                <hr aria-hidden="true">
 <? } ?>
 
                 <!-- Pager -->

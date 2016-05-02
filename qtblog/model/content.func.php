@@ -90,8 +90,10 @@ function content_format(&$content) {
 	//$content['text'] = MarkdownExtraExtended::defaultTransform($content['text']);
 	if(substr($content['text'], 0, 15) == '<!--markdown-->') {
 	$text = substr($content['text'], 15);
-	$parser = new HyperDown\Parser;
-	$content['text'] = $parser->MakeHtml($text);
+	//$parser = new HyperDown\Parser;
+	//$content['text'] = $parser->MakeHtml($text);
+$parser = Parsedown::instance()->setBreaksEnabled(true);
+		$content['text'] = $parser->text($text);
 	}
 	$content['tags'] = content_tags($content['cid']);
 	$content['category'] = '';

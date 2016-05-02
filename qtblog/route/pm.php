@@ -148,7 +148,7 @@ print_r($meta);
 				$temp = relationship_read($cid, $mid);
 				if(empty($temp)) {
 					relationship_create(array('cid'=>$cid, 'mid'=>$mid));
-					meta_update($meta['mid'], array('count+'=>1));
+					meta_update($mid, array('count+'=>1));
 				}
 			}
 		}
